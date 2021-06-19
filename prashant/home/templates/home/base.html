@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <title> {% block title%} {% endblock %} </title>
-  <style>
-    {
-      % block style %
-    }
+ 
 
-      {
-      % endblock style %
-    }
+  <style>
+    {% block style %}
+
+      {% endblock style %}
   </style>
 
 </head>
@@ -44,22 +42,22 @@
     </div>
   </header>
 
-
   
 
   {% block body %}
 
   {% endblock body %}
 
-
-
   <script>
 
     {% block script %}
     {% endblock script %}
 
-  </script>
+  </script> 
 
+ 
 </body>
+
+ 
 
 </html>
