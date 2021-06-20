@@ -121,8 +121,9 @@
   {% for post in posts %}
     <li>
       <div>
-        <time>{{post.timestamp}}</time><p>{{post.title}}  {{post.subtitle}}</p>
-        {{post.content}}
+        <time>{{post.timestamp}}</time><p class= "title">{{post.title}}  {{post.subtitle}}</p>
+         <span> {{post.content}} </span><a href="{{post.link}}" target= "blank">🔗</a>
+         
       </div>
     </li>
     {% endfor %}
