@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Timeline
+from .models import Timeline, Blog
 
 # Create your views here.
 def home(request):
@@ -8,6 +8,9 @@ def home(request):
     }
     return render(request,'home/index.html',context)
 
-def about(request):
-    return render(request,'home/first.html')
+def blog(request):
+    contexts = {
+        'blogs': Blog.objects.all()
+    }
+    return render(request,'home/first.html',contexts)
 

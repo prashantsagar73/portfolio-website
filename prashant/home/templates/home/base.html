@@ -10,6 +10,8 @@
 
 
   <style>
+     {% block style %}
+    {% endblock style %}
     *,
     *::before,
     *::after {
@@ -255,14 +257,25 @@
         transform: translateX(-50%) scale(1);
       }
     }
+  
 
-      {
-      % block style %
-    }
 
-      {
-      % endblock style %
+  .footer{
+  padding-top: 300px;
+  
+  .credits{
+    text-align: center;
+    color: #666;
+    
+    .link{
+      color: $main-color;
+      text-decoration: none;
     }
+    
+  }
+  
+}
+
   </style>
 
 </head>
@@ -279,11 +292,12 @@
         <a href="{% url 'prashant:home' %}" class="mr-5 hover:text-white">PRASHANT SAGAR</a>
       </a>
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a href="{% url 'prashant:about' %}" class="mr-5 hover:text-white">About</a>
+        {% comment %} <a href="{% url 'prashant:blog' %}" class="mr-5 hover:text-white">About</a> {% endcomment %}
         <a href="" class="mr-5 hover:text-white"></a>
       </nav>
       <button
-        class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Blog
+        class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+        <a href="{% url 'prashant:blog' %}" class="mr-5 hover:text-white">Blogs </a>
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           class="w-4 h-4 ml-1" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -299,7 +313,20 @@
 
 
   <!-- footer -->
+  <footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+      <span class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer"> Prashant Sagar</span>
+    </a>
+    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2018-2021
+      <a href="https://github.com/prashantsagar73/portfolio-website" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer"> Source Code</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a href="" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">Imposible list </a>
 
+    </span>
+  </div>
+</footer>
 
   <script>
     (function () {
@@ -341,7 +368,5 @@
 
 
 </body>
-
-
 
 </html>

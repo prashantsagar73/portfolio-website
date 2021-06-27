@@ -6,7 +6,7 @@ app_name = 'prashant'
 
 urlpatterns = [
     path('',views.home,name="home"),
-    path('first/',views.about,name="about"),
+    path('blog/',views.blog,name="blog"),
 
     # path("first/", TemplateView.as_view(template_name="home/first.html")),
 ]
