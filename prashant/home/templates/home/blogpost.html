@@ -1,0 +1,15 @@
+{% extends 'home/index.html' %} {% block title %} contact {% endblock title %} {% block contactactive %} active {% endblock contactactive %} 
+
+{% block body %} 
+     
+ <div class="row featurette my-3">
+          <div class="col-md-12">
+               <div class="mb-1 text-muted">{{ object.date_time }}</div>
+                            
+            <h2 class="featurette-heading"> {{ object.title }}<span class="text-muted"> </span></h2>
+            <p class="lead">{{ object.content }}</p>
+      </div>
+      <div>
+  </div>
+
+{% endblock body %}
