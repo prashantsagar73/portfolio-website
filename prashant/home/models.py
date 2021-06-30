@@ -20,6 +20,7 @@ class Blog(models.Model):
     blog_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=300)
     content = models.TextField(default=" ")
+    short_desc = models.CharField(max_length=300,default="")
     timestamp = models.DateField(default=timezone.now)
     link = models.URLField(("Link"), max_length=1000,
         unique=False, 
