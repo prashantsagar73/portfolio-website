@@ -25,3 +25,7 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Blog
     template_name = 'home/blogpost.html' 
+
+# imposible list 
+def impos(request):
+    return render(request,'home/imposible.html')
