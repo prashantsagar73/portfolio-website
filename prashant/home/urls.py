@@ -1,9 +1,12 @@
+from django.contrib import admin
 from django.urls import include ,path
 from .views import PostListView, PostDetailView 
-# from django.views.generic import TemplateView
-
 from . import views
 app_name = 'prashant'
+
+admin.site.site_header= "Prashant's Portfolio"
+admin.site.site_title= "Welcome to Prashant's portfolio website"
+admin.site.index_title= "Welcome to this website"
 
 urlpatterns = [
     path('',views.home,name="home"),
