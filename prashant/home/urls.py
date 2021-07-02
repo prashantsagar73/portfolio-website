@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import include ,path
-from .views import PostListView, PostDetailView 
-from . import views
+from .views import PostListView, PostDetailView, TimeListView, ImposListView
 app_name = 'prashant'
 
 # admin page customization 
@@ -11,8 +10,9 @@ admin.site.index_title= "Welcome to this website"
 
 # urlpatterns of pages 
 urlpatterns = [
-    path('',views.home,name="home"),
-    path('imposible/',views.impos,name="imposible"),
+    path('',TimeListView.as_view(),name="home"),
+    path('imposible/',ImposListView.as_view(),name="impos"),
+    # path('imposible/',views.impos,name="imposible"),
     path('blog/', PostListView.as_view(), name ="blog"),
     path('blog/<int:pk>/', PostDetailView.as_view(), name ="post_detail"),
 

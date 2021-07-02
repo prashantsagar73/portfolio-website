@@ -3,9 +3,7 @@
 {% block style %}
 
 
-{%endblock style%} 
-
-
+{% endblock style %} 
 
 {% block body %}
 <!-- card -->
@@ -34,8 +32,8 @@
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-8 text-white">PRASHANT SAGAR</h1>
 
       <h2 class=" title-font">Student,
-        web Developer,
-        Runner</h2>
+        Developer,
+        Explorer</h2>
 
       <br>
       <!-- icon  -->
@@ -121,8 +119,8 @@
   {% for post in posts %}
     <li>
       <div>
-        <time>{{post.timestamp}}</time><p class= "title">{{post.title}}  {{post.subtitle}}</p>
-         <span> {{post.content}} </span><a href="{{post.link}}" target= "blank">🔗</a>
+        <time>{{post.timestamp}}</time><p class= "title">{{post.title}} <br> {{post.subtitle}}</p>
+         <span> {% autoescape off %} {{post.content}} {% endautoescape %} </span><a href="{{post.link}}" target= "blank">🔗</a>
          
       </div>
     </li>
