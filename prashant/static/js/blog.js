@@ -1,3 +1,4 @@
+// tiny editior Plugin and js code 
 
 document.addEventListener("DOMContentLoaded",function(event){
     console.log("hlelo form admin");

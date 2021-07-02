@@ -1,10 +1,12 @@
 from django.contrib import admin
-from .models import Timeline, Blog
+from django.db import models
+from .models import Timeline, Blog, List
 
 # Register your models here.
-admin.site.register(Timeline)
+admin.site.register((Timeline,List ))
 
 
+# tiny editior in blog models
 class BlogAdmin(admin.ModelAdmin):
     class Media:
         css= {

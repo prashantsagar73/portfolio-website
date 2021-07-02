@@ -1,8 +1,11 @@
 from django.db import models
+from django.db.models.fields import CharField
 from django.utils import timezone
 from django.urls import reverse
 
 # Create your models here.
+
+# timeline models
 class Timeline(models.Model):
     post_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=300)
@@ -16,6 +19,7 @@ class Timeline(models.Model):
     def __str__(self):
         return self.title 
 
+# blog models
 class Blog(models.Model):
     blog_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=300)
@@ -30,4 +34,12 @@ class Blog(models.Model):
         return self.title   
 
     def get_absolute_url(self):
-        return reverse("post_detail", kwargs={'pk': self.pk})         
+        return reverse("post_detail", kwargs={'pk': self.pk})        
+
+# imposible list models
+class List(models.Model):
+    title = models.CharField(max_length=300)
+    sub_title = models.TextField(default="")
+
+    def __str__(self):
+        return self.title

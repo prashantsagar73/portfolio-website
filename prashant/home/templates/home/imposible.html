@@ -7,9 +7,7 @@
       <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">imposible list </h1>
       <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">By Prashant sagar</p>
     </div>
-
-
-
+    {% for list in lists %}
     <div class="flex flex-wrap lg:w-4/7 sm:mx-auto sm:mb-2 -mx-2">
       <div class="p-2 sm:w-1/2 w-full">
         <div class="bg-gray-800 rounded flex p-4 h-full items-center">
@@ -17,96 +15,16 @@
             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
             <path d="M22 4L12 14.01l-3-3"></path>
           </svg>
-          <span class="title-font font-medium text-white">Fun and/or "Insane" Goals</span>
+          <span class="title-font font-medium text-white">{{list.title}}</span>
         </div>
       </div>
       <div class="flex flex-wrap">
       <div class="md:w-full px-8 py-6 border-l-2 border-gray-800">
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Skydive</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">scuba diving</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Own a AMG GTR</h2>
+        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">{% autoescape off %} {{list.sub_title}} {% endautoescape %}</h2>
         </div>
         </div>
-    </div>  
-    <div class="flex flex-wrap lg:w-4/7 sm:mx-auto sm:mb-2 -mx-2">
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-800 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-green-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium text-white">Technology Goals</span>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-      <div class="md:w-full px-8 py-6 border-l-2 border-gray-800">
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2"><strike>Participate in national Hackathon</strike></h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Implement CI/CD on a big project</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Set up GSAYD</h2>
-      </div>
-     </div>
-     </div>
-
-     <div class="flex flex-wrap lg:w-4/7 sm:mx-auto sm:mb-2 -mx-2">
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-800 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-green-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium text-white">Health/Sports Goals</span>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-      <div class="md:w-full px-8 py-6 border-l-2 border-gray-800">
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Run 21km (half marathon)</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Run 42km (marathon)</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2"><strike>Run 10km </strike></h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2"><strike>cycling 30 km a day </strike></h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Mountain hiking</h2>
-      </div>
-     </div> 
-     </div>
-
-      <div class="flex flex-wrap lg:w-4/7 sm:mx-auto sm:mb-2 -mx-2">
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-800 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-green-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium text-white">Events to Attend</span>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-      <div class="md:w-full px-8 py-6 border-l-2 border-gray-800">
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">enrique iglesias live events</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2"></h2>
-      </div>
-     </div> 
-     </div>
-
-      <div class="flex flex-wrap lg:w-4/7 sm:mx-auto sm:mb-2 -mx-2">
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-800 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-green-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium text-white">Places/Citites to Visit</span>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-      <div class="md:w-full px-8 py-6 border-l-2 border-gray-800">
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2"> <strike>campus visit "repuated" company</strike></h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Paris, France</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">London, England</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">New York City, USA</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Los Angeles, USA</h2>
-        <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Silicon Valley, California, USA</h2>
-      </div>
-     </div> 
-     </div>
+    </div> 
+    {% endfor %}
   </div>
 </section>
 {% endblock body %}

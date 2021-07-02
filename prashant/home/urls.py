@@ -4,10 +4,12 @@ from .views import PostListView, PostDetailView
 from . import views
 app_name = 'prashant'
 
+# admin page customization 
 admin.site.site_header= "Prashant's Portfolio"
 admin.site.site_title= "Welcome to Prashant's portfolio website"
 admin.site.index_title= "Welcome to this website"
 
+# urlpatterns of pages 
 urlpatterns = [
     path('',views.home,name="home"),
     path('imposible/',views.impos,name="imposible"),
